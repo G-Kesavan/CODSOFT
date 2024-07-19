@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.cointainar{
+    display: grid;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.calculator{
+    display: grid;
+    grid-template-columns: repeat(4,68px);
+    background-color: rgba(245, 245, 220, 0.863);
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 4px 3px rgb(223, 220, 245);
+    height: 75%;
+}
+#display-screen{
+    grid-column: span 4;
+    grid-row: span 2;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border-style: none;
+    background-color: aqua;
+    text-align: right;
+    font-size: 25px;
+    box-shadow: inset 0px 0px 4px 3px;
+}
+.equal{
+    grid-column: span 2;
+}
+button{
+    padding: 15px;
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 17px;
+    text-align:center;
+}
