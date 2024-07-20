@@ -2,19 +2,24 @@
     margin: 0;
     padding: 0;
 }
-.cointainar{
+.container{
     display: grid;
     height: 100vh;
     align-items: center;
     justify-content: center;
+    background-color: aliceblue;
+  
 }
 .calculator{
     display: grid;
-    grid-template-columns: repeat(4,68px);
-    background-color: rgba(245, 245, 220, 0.863);
+    grid-template-columns: repeat(4,75px);
+    background-color: rgb(250, 10, 122);
     padding: 10px;
     border-radius: 20px;
-    box-shadow: inset 0px 0px 4px 3px rgb(223, 220, 245);
+    border-style: solid;
+    border-color: rgb(255, 228, 196);
+    box-shadow: inset 0px 0px 4px 3px rgba(183, 106, 247, 0.712),
+                0px 0px 4px 1px rgba(184, 106, 247, 0.952);
     height: 75%;
 }
 #display-screen{
@@ -24,11 +29,13 @@
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 20px;
-    border-style: none;
-    background-color: aqua;
+    border-style:solid;
+    border-color:rgba(196, 86, 36, 0.534);
+    background-color: rgb(255, 255, 255);
     text-align: right;
     font-size: 25px;
-    box-shadow: inset 0px 0px 4px 3px;
+    color: #ff0000;
+    box-shadow: inset 0px 0px 4px 0px rgba(250, 79, 0, 0.733);
 }
 .equal{
     grid-column: span 2;
@@ -36,7 +43,13 @@
 button{
     padding: 15px;
     margin: 5px;
-    border-radius: 10px;
+    border-radius: 30%;
     font-size: 17px;
     text-align:center;
+    border-style: none;
+    box-shadow: inset 0px 0px 4px 3px rgba(183, 106, 247, 0.712),
+                0px 0px 4px 1px rgba(184, 106, 247, 0.952);
+    background-color: rgb(255, 255, 255);
+    font-weight: 550;
+    color: rgb(0, 17, 255);
 }
