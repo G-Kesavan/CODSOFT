@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 520vh;
+    width: 100%;
+    background-color: aquamarine;
+}
+header{
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+                /******************* navber style start *****************************/
+
+.navber{
+    height: 100%;
+    width: 100%;
+    background-color: brown;
+    position: relative;
+    display: flex;
+    display: none;
+}
+.navber ul{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    background-color: yellowgreen;
+    
+}
+                /************************* navber style end ************************/
+
+                /*********************** sideber style start ***********************/
+.sideber{
+height: 100%;width: 100%;
+display: flex;
+background-color: azure;
+}
+.sideber ul{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.sideber ul li:nth-child(2){
+    position: relative;
+}
+#menu:hover #list{
+    display: grid;
+}
+.sideber ul ul{
+    display: grid;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.233);
+    height: 200px;
+    width: 150px;
+    right:0;
+    display: none;
+    align-items: center;
+    border-radius: 20px 0px 0px 20px;
+    justify-content:center;
+}
+.sideber ul ul li a{
+    color: aliceblue;
+}
+#close:hover #list{
+    display: none;
+}
+                /******************* sideber style end **********************/
+.sections {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+.about{
+    background-color: blue;   
+}
+.education{
+    background-color: rgba(0, 0, 255, 0.795);
+}
+.skill{
+    background-color: rgba(0, 0, 255, 0.568);   
+}
+.project{
+    background-color: rgba(0, 0, 255, 0.356);
+}
+.contect{
+    background-color: rgba(237, 237, 240, 0.226);
+}
+footer{
+    background-color: rgb(230, 240, 232);
+    height: 20vh;
+    width: 100%;
+    position: relative;
+}
