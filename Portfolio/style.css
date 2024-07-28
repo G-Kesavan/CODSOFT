@@ -1,3 +1,4 @@
+/* ***************************** page reset ******************************* */
 *{
     margin: 0;
     padding: 0;
@@ -7,10 +8,11 @@ body{
     height: 520vh;
     width: 100%;
     background-color: aquamarine;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 header{
     display: flex;
-    height: 10vh;
+    height: 8vh;
     width: 100%;
     position: relative;
     justify-content: center;
@@ -20,7 +22,7 @@ header{
     z-index: 99;
 }
 
-                /******************* navber style start *****************************/
+/* ************************ navber style start **************************** */
 
 .navber{
     height: 100%;
@@ -40,13 +42,16 @@ header{
     background-color: yellowgreen;
     
 }
-                /************************* navber style end ************************/
+.navber ul li a{
+    text-decoration: none;
+}
+/* ************************** navber style end **************************** */
 
-                /*********************** sideber style start ***********************/
+/* (************************ sideber style start ************************** */
 .sideber{
 height: 100%;width: 100%;
 display: flex;
-background-color: azure;
+background-color: rgb(41, 104, 74);
 }
 .sideber ul{
     height: 100%;
@@ -56,6 +61,7 @@ background-color: azure;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+    color: aliceblue;
 }
 .sideber ul li:nth-child(2){
     position: relative;
@@ -77,29 +83,167 @@ background-color: azure;
 }
 .sideber ul ul li a{
     color: aliceblue;
+    text-decoration: none;
 }
 #close:hover #list{
     display: none;
 }
-                /******************* sideber style end **********************/
+/* ********************* sideber style end ************************ */
 .sections {
     height: 100vh;
     width: 100%;
     position: relative;
 }
-.about{
-    background-color: blue;   
+.sec-contenar{
+    position: absolute;
+    top: 10vh;
+    height: 90vh;
+    width: 100%;
 }
-.education{
-    background-color: rgba(0, 0, 255, 0.795);
+/* ***** section about style start ***** */
+                .text{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    gap: 3px;
+                    padding: 10px;
+                }
+                button{
+                    background-color: rgb(41, 104, 74);
+                    font-size:18px;
+                    height: 2.5rem;
+                    width: 7rem;
+                    border: none;
+                    margin: 8px 15px 8px 15px;
+                    color: aliceblue;
+                    align-items: center;
+                }
+#about img{
+    height: 50%;
+    width: auto;
+    padding: 20px;
+    border-radius: 50%;
+    float: left;
 }
-.skill{
-    background-color: rgba(0, 0, 255, 0.568);   
+.about-con{
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+    align-items: center;
 }
-.project{
-    background-color: rgba(0, 0, 255, 0.356);
+.about-con h1{
+    color: aliceblue;
+    padding: 5px 15px 0px 15px;
+    text-align: center;
 }
-.contect{
+.about-con h2{
+    color: aliceblue;
+    padding: 5px 15px 0px 15px;
+    text-align: center;
+}
+.about-con h3 {
+    color: aliceblue;
+    padding: 5px 15px 0px 15px;
+    text-align: start;
+}
+/* ***** section about style end ***** */
+
+/* ***** section education style start ***** */
+#education img{
+    height: 50%;
+    width: auto;
+    padding: 20px;
+}
+.education-con{
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+    align-items: center;
+}
+.education-con h1{
+    color: rgb(0, 0, 0);
+    padding: 5px 15px 0px 15px;
+    text-align: center;
+}
+.education-con h2{
+    color: rgb(0, 0, 0);
+    padding: 5px 15px 0px 15px;
+    text-align: start;
+    font-size: 20px;
+}
+.education-con h3{
+    color: rgb(0, 0, 0);
+    padding: 5px 15px 0px 15px;
+    text-align: start;
+    font-size: 18px;
+} 
+/* ***** section education style end ***** */
+/* ***** section skill style start ***** */
+#skill img{
+    height: 50%;
+    width: auto;
+    padding: 20px;
+}
+.skill-con{
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+    align-items: center;
+}
+.skill-con h1{
+    color: rgb(0, 0, 0);
+    padding: 5px 15px 0px 15px;
+    text-align: center;
+}
+.skill-con h2{
+    color: rgb(0, 0, 0);
+    padding: 5px 15px 0px 15px;
+    text-align: start;
+    font-size: 20px;
+}
+.skill-con h3{
+    color: rgb(0, 0, 0);
+    padding: 5px 15px 0px 15px;
+    text-align: start;
+    font-size: 18px;
+} 
+#skill-text{
+    display: flex;
+    flex-direction: row;
+    flex-flow:row wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+#skill-text img{
+    height: 100%;
+    width: 100%;
+    z-index: 666;
+}
+.skill-s{
+    height: 80px;
+    width: 80px;
+    display: flex;
+    background-color: bisque;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ***** section education style end ***** */
+#about{
+    background-color: rgb(1, 173, 145);
+}                
+#education{
+    background-color: rgb(169, 255, 241);
+}
+#skill{
+    background-color: rgb(1, 173, 145);   
+}
+#project{
+    background-color: rgb(169, 255, 241);
+}
+#contect{
     background-color: rgba(237, 237, 240, 0.226);
 }
 footer{
@@ -107,4 +251,37 @@ footer{
     height: 20vh;
     width: 100%;
     position: relative;
+}
+@media screen and (min-width:600px){
+
+    .navber{
+        display: flex;
+    }
+    .sideber{
+        display: none;
+    }
+    #about img{
+        height:auto;
+        width: 35%;
+    }
+    .about-con{
+        flex-direction: row;
+        justify-content: center;
+    }
+    #education img{
+        width: 40%;
+        height: auto;
+    }
+    .education-con{
+        flex-direction: row;
+        flex-flow: row-reverse;
+        justify-content: center;
+    }
+    #skill img{
+        width: 50%;
+        height: auto;
+    }
+    .skill-con{
+        flex-direction: row;
+    }
 }
