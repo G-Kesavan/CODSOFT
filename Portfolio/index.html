@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>Portfolio</title>
 </head>
 <body>
@@ -21,13 +22,14 @@
         <nav class="sideber">
             <ul>
                 <li>My Portfolio</li>
-                <li id="menu">Menu
+                <li id="menu"><span class="material-symbols-outlined" id="menu-icon">menu</span>
                     <ul id="list">
                         <li ><a href="#about">About</a></li>
                         <li ><a href="#education">Education</a></li>
                         <li ><a href="#skill">Skill</a></li>
                         <li ><a href="#project">Project</a></li>
                         <li ><a href="#contect">Contect</a></li>
+                        <li id="close"><a><span id="close-icon" class="material-symbols-outlined">close</span></a></li>
                     </ul>
                 </li>
             </ul>
@@ -36,8 +38,8 @@
 
     <main>
         <section class="sections" id="about">
-            <div class="sec-contenar about-con" id="">
-                <img src="pic.png">
+            <div class="sec-container about-con" id="">
+                <img src="./photos and icon/profile.png">
                 <div class="text">
                 <h1>Hi i am Kesavan </h1>
                 <h2>BCA Student</h2>
@@ -47,50 +49,72 @@
         </section>
 
         <section class="sections" id="education">
-            <div class="sec-contenar education-con">
-                <img src="education1.png">
+            <div class="sec-container education-con">
+                <img src="./photos and icon/education1.png">
                 <div class="text" id="education-text">
-                <h1>Education</h1>
-                <h2>BCA (Bachlar fo computer apllication)</h2>
-                <h3>Jawaher science college,Annamalai University</h3>
+                <h1>Education :</h1>
+                <h2>BCA (Bechelor fo computer application)</h2>
+                <h3>Jawaher science college, Annamalai University</h3>
                 <button>Get detial</button>
                 </div>
             </div>
         </section>
 
         <section class="sections" id="skill">
-            <div class="sec-contenar skill-con">
-                <img src="education1.png">
-                <div class="text" >
-                    <h1>Skills</h1>
+            <div class="sec-container skill-con">
+                <img src="./photos and icon/skill.png">
+                <div class="text" id="skills-text">
+                    <h1>Skills :</h1>
                     <div id="skill-text">
-                        <div class="skill-s"><img src="html-icon.png" alt="skill"></div>
-                        <div class="skill-s"><img src="css-icon.png" alt="skill"></div>
-                        <div class="skill-s"><img src="javascript.png" alt="skill"></div>
-                        <div class="skill-s"><img src="react-js-icon.png" alt="skill"></div>
-                        <div class="skill-s"><img src="node-js-icon.png" alt="skill"></div>
-                        <div class="skill-s"><img src="mongodb-icon.png" alt="skill"></div>
+                        <div class="skill-s"><img src="./photos and icon/html-icon.png" alt="skill"></div>
+                        <div class="skill-s"><img src="./photos and icon/css-icon.png" alt="skill"></div>
+                        <div class="skill-s"><img src="./photos and icon/javascript.png" alt="skill"></div>
+                        <div class="skill-s"><img src="./photos and icon/react-js-icon.png" alt="skill"></div>
+                        <div class="skill-s"><img src="./photos and icon/node-js-icon.png" alt="skill"></div>
+                        <div class="skill-s"><img src="./photos and icon/mongodb-icon.png" alt="skill"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="sections" id="project">
-            <div class="sec-contenar project-con">
-                    
+      <section class="sections" id="project">
+            <div class="sec-container project-con">
+                <div class="pro-con">
+                    <div class="proj"><a href=""><span>Landing page</span></a></div>
+                    <div class="proj"><a href=""><span>Calculeter</span></a></div>
+                    <div class="proj"><a href=""><span>Tribute page</span></a></div>
+                    <div class="proj"><a href=""><span>Portfolio</span></a></div>
+                    <div class="proj"><a href=""><span>Job board</span></a></div>
+                    <div class="proj"><a href=""><span>Blogging plat</span></a></div>
+                </div>
             </div>
         </section>
 
-        <section class="sections contect" id="contect">
-            <div class="sec-contenar contect-con">
-                    
+        <section class="sections" id="contect">
+            <div class="sec-container contect-con">
+                  <div class="contect-box">
+                        <div class="contect-heading cont"><h1>CONTECT ME</h1></div>
+                        <div class="contect-name cont"><input type="text" placeholder="Name"></div>
+                        <div class="contect-email cont"><input type="email" placeholder="Email"></div>
+                        <div class="contect-subject cont"><input type="text" placeholder="Subject"></div>
+                        <div class="contect-message cont"><input type="text" placeholder="Message"></div>
+                        <div class="contect-button cont"><button>Submit</button></div>
+                  </div> 
+                  <div class="social-media">
+                    <div class="social-icon"><a href=""><img src="./photos and icon/mail.png" alt="Email"></a></div>
+                    <div class="social-icon"><a href=""><img src="./photos and icon/whatsapp.png" alt="WhateApp"></a></div>
+                    <div class="social-icon"><a href=""><img src="./photos and icon/linkedin.png" alt="LinkedIn"></a></div>
+                    <div class="social-icon"><a href=""><img src="./photos and icon/telegram.png" alt="Telegram"></a></div>
+                  </div>
             </div>
         </section>
         
     </main>
 
     <footer>
-
+            <h3>&copy; Copyright 2024</h3>
+            <h4>Phone number: +91 63 74 79 02 92</h4>
+            <h4>Gmail: mr.kesavaperumal@gmail.com</h4>
     </footer>
 </body>
 </html>
