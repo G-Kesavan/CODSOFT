@@ -1,20 +1,20 @@
 *{
     margin: 0;
     padding: 0;
-    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
-    font-optical-sizing: auto;
-    font-weight:500;
     box-sizing: border-box;
   }
 body{
-    height:100vh;
-    width: 100vw;
+    height:200vh;
+    width: 100%;
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-optical-sizing: auto;
+    font-weight:500;
 }
 header{
-  width: 100vw;
-  height: 15vh;
+  width: 100%;
+  height: 10vh;
   background-color: #eff5f5;
-  position: absolute;  
+  position: relative;  
 }
 .navber{
   height: 56%;
@@ -25,6 +25,7 @@ header{
   right: 5%;
   border-radius: 40px;
   display: flex;
+  display: none;
   align-items: center;
   box-shadow: 0px 0px 5px 0px #00b7ff;
   color: aliceblue;
@@ -96,106 +97,128 @@ align-items: center;
 justify-content: space-between;
 height: 100%;
 width: 100%;
-display: none;
 }
 .heading{
   background-color: #093dcc;
   border-radius: 0px 15px 15px 0px;
   color: aliceblue;
-  padding: 1% 2% 1% 2%;
+  height: 45px;
+  width: 150px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 .menu-icon{
   background-color: #093dcc;
   border-radius: 15px 0px 0px 15px;
-  padding-right: 1%;
-  padding-left: 1.5%;
-
+  height: 45px;
+  width: 50px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 .main{
-  width: 100vw;
-  height: 60vh;
-  position: absolute;
-  top: 15vh;
-  background-color: #eff5f5;
-}
-.image {
-  width: 50%;
-  height: 100%;
-  float: right;
-}
-.image img{
-  height: 100%;
   width: 100%;
-}
-.main h2{
-  margin-left: 5%;
-  margin-top: 5%;
-}
-.main h4{
-  margin-left: 5%;
-  margin-top: 1%;
-}
-.main button{
-  height: 2.7rem;
-  width: 7rem;
-  border-radius: 30px;
-  border: solid rgb(93, 26, 250);
+  height: 90vh;
   position: relative;
-  margin-left: 5%;
-  margin-top: 1%;
-}
-.footer{
-  width: 100vw;
-  height: 25vh;
   background-color: #eff5f5;
-  position: absolute;
-  left: 0;
-  top: 75%;
-  bottom: 0;
-}
-.productdetial{
-  display: grid;
-  height: 100%;
-  width: 100%;
-  grid-template-columns: repeat(4,1fr);
-}
-.product-list{
-display: flex;
-flex-direction: column;
-}
-.product-list p{
-  padding: 7px;
-}
-.product-list h3{
-  padding: 10px 0px 0px 7px;
-  color: rgb(240, 55, 9);
-}
-.product-list a{
-  padding: 0px 0px 0px 7px;
-  text-align: left;
-}
-.product-list h2{
-  padding: 10px 20px 0px 20px;
-}
-.product-list .discount p{
-  padding: 10px 20px 0px 20px;
-}
-.discount{
-  height: 130%;
-  position: absolute;
   display: flex;
   flex-direction: column;
-  background-color: #093dcc;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  align-items: center;
   justify-content: center;
-  align-items:flex-start;
-  border-radius: 0px 100% 0px 0px;
+}
+.image {
+  width: 100%;
+  height: 50%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.image img{
+width: 100%;
+height: auto;
+}
+.text{
+  height: auto;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items:center;
+  justify-content:center;
+  padding: 10px;
+}
+.text h2{
+font-size: 20px;
+}
+.text h4{
+font-size: 15px;
+text-align: center;
+}
+.text button{
+  height: 2.5rem;
+  width: 6rem;
+  border-radius: 30px;
+  border: solid 2px rgb(93, 26, 250);
+}
+.footer{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.productdetial{
+  display: flex;
+  flex-flow: column wrap;
+  height: 100%;
+  width: 100%;
+  background-color:#eff5f5 ;
+}
+.product-list{
+height: 25%;
+width: 100%;
+display: flex;
+flex-flow: column wrap;
+align-items: center;
+justify-content: center;
+}
+.product-list p{
+padding: 5px;
+text-align: center;
+}
+.product-list h3{
+  padding: 5px;
+}
+.product-list a{
+ text-decoration: none;
+}
+.product-list h2{
+  padding: 5px;
+}
+.discount-r{
+  background-color: #072fa7;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  border-radius: 0% 100% 0px 0px;
+}
+.discount-l{
+  background-color: #072fa7;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  border-radius: 1000% 0px 0px 0px;
 }
 #pro0{
-  position: relative;
-  background-color: rgba(12, 68, 223, 0.631);
+  background-color: #eff5f5;
+  display: flex;
+  align-items: flex-start;
 }
 #pro1{
   background-color: rgba(12, 68, 223, 0.631);
@@ -206,71 +229,80 @@ flex-direction: column;
 #pro3{
   background-color: rgba(12, 68, 223, 0.37);
 }
-@media screen and (max-width : 750px){
-  .productdetial{
-    grid-template-columns: repeat(1,1fr 1fr);
-  }
-  .footer{
-    height: 50vh;
-  }
-  
-}
-@media screen and (max-width:500px){
-  .image{
-    width: 100%;
-    height: 40%;
-  }
-  .main{
-    font-size: 14px;
-  }
-  .main button{
-    height: 2rem;
-    width: 6rem;
-  }
-}
-@media screen and (max-width : 450px){
 
-  .navber{
-    display: none;
+@media screen and (min-width : 600px){
+  body{
+    height: 160vh;
   }
-  .sideber{
+  .navber{
     display: flex;
   }
-  .productdetial{
-    grid-template-columns: repeat(1,1fr);
-    
+  .sideber{
+    display: none;
   }
   .footer{
-    height: 80vh;
+    height: 60vh;
+  }
+  .productdetial{
+    flex-flow: row wrap;
   }
   .product-list{
-    height: 20vh;
+    width: 50%;
+    height: 50%;
   }
-  .discount{
-    height: 120%;
+  .discount-r{
+    border-radius:  0px;
   }
 }
-@media screen and (max-width : 415px){
-
+@media screen and (min-width : 750px){
+  body{
+    height: 100vh;
+  }
+  .header{
+    height: 12vh;
+  }
+  .main{
+    height: 60vh;
+    flex-flow: row-reverse;
+  }
+  .footer{
+    height: 28vh;
+  }
+  .image {
+    width: 50%;
+    height: 100%;
+  }
+  .text{
+    width: 50%;
+    height: 100%;
+    align-items: flex-start;
+    padding: 20px 20px 20px 50px;
+  }
+  .text h2{
+    font-size: 25px;
+  }
+  .text h4{
+    font-size: 18px;
+    text-align: left;
+  }
+  .text button{
+      height: 3rem;
+      width: 7rem;
+      border-radius: 30px;
+      border: solid 2px rgb(93, 26, 250);
+  }
   .product-list{
-    justify-content: center;
+    width: 25%;
+    height: 100%;
   }
-  #pro1,#pro2,#pro3,#pro0{
-    text-align: center;
+  #pro1{
+    border-radius: 30px 0px 0px 0px;
   }
-  .product-list a{
-    text-align: center;
+  .discount-r{
+    border-radius: 0% 100% 0% 0% ;
   }
-}
-@media screen and (min-height : 800px){
-
-  .product-list{
-    justify-content: center;
+  .discount-l{
+    border-radius:  100% 0% 0% 0% ;
   }
-  #pro1,#pro2,#pro3,#pro0{
-    text-align: center;
-  }
-  .product-list a{
-    text-align: center;
-  }
+ 
 }
