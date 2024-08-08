@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <nav class="navber">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skill">Skill</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#contect">Contact</a></li>
+            </ul>
+        </nav>
+
+        <nav class="sideber">
+            <ul>
+                <li>Landing Page</li>
+                <li id="menu">
+                    <span id="menu-icon" class="material-symbols-outlined" onclick="menushow()">menu</span>
+                    <span id="close-icon" class="material-symbols-outlined" onclick="menuclose()">close</span>
+                    <ul class="list">
+                        <li><a href="#about">Home</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#skill">Skills</a></li>
+                        <li><a href="#project">Projects</a></li>
+                        <li><a href="#contect">Contact</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- About Section -->
+        <section class="sections" id="about">
+            <div class="sec-container about-con">
+                <img src="./photos and icon/Full size .png" alt="Profile Picture">
+                <div class="text about-text">
+                    <h1>Hi, I am Kesavan</h1>
+                    <h2>BCA Student</h2>
+                    <h3>I enjoy coding and always strive to learn new technologies to enhance my skills.</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="sections" id="education">
+            <div class="sec-container education-con">
+                <img src="./photos and icon/education1.png" alt="Education Image">
+                <div class="text" id="education-text">
+                    <h1>Education:</h1>
+                    <h2>BCA (Bachelor of Computer Application)</h2>
+                    <h3>Jawahar Science College, Annamalai University</h3>
+                    <button>Get Details</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="sections" id="skill">
+            <div class="sec-container skill-con">
+                <img src="./photos and icon/skill.png" alt="Skills Image">
+                <div class="text" id="skills-text">
+                    <h1>Skills:</h1>
+                    <div id="skill-text">
+                        <div class="skill-s"><img src="./photos and icon/html-icon.png" alt="HTML"></div>
+                        <div class="skill-s"><img src="./photos and icon/css-icon.png" alt="CSS"></div>
+                        <div class="skill-s"><img src="./photos and icon/javascript.png" alt="JavaScript"></div>
+                        <div class="skill-s"><img src="./photos and icon/react-js-icon.png" alt="React"></div>
+                        <div class="skill-s"><img src="./photos and icon/node-js-icon.png" alt="Node.js"></div>
+                        <div class="skill-s"><img src="./photos and icon/mongodb-icon.png" alt="MongoDB"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="sections" id="project">
+            <div class="sec-container project-con">
+                <div class="pro-con">
+                    <div class="proj"><a href=""><span>Landing Page</span></a></div>
+                    <div class="proj"><a href=""><span>Calculator</span></a></div>
+                    <div class="proj"><a href=""><span>Tribute Page</span></a></div>
+                    <div class="proj"><a href=""><span>Portfolio</span></a></div>
+                    <div class="proj"><a href=""><span>Job Board</span></a></div>
+                    <div class="proj"><a href=""><span>Blogging Platform</span></a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="sections" id="contect">
+            <div class="sec-container contect-con">
+                <div class="contect-box">
+                    <div class="contect-heading cont"><h1>CONTACT ME</h1></div>
+                    <div class="contect-name cont"><input type="text" placeholder="Name"></div>
+                    <div class="contect-email cont"><input type="email" placeholder="Email"></div>
+                    <div class="contect-subject cont"><input type="text" placeholder="Subject"></div>
+                    <div class="contect-message cont"><input type="text" placeholder="Message"></div>
+                    <div class="contect-button cont"><button>Submit</button></div>
+                </div> 
+                <div class="social-media">
+                    <div class="social-icon"><a href="mailto:mr.kesavaperumal@gmail.com" title="Email"><img src="./photos and icon/mail.png" alt="Email"></a></div>
+                    <div class="social-icon"><a href="https://t.me/6374790292" title="Telegram"><img src="./photos and icon/telegram.png" alt="Telegram"></a></div>
+                    <div class="social-icon"><a href="https://wa.me/6374790292" title="WhatsApp"><img src="./photos and icon/whatsapp.png" alt="WhatsApp"></a></div>
+                    <div class="social-icon"><a href="https://www.linkedin.com/in/kesava-perumal-g/" title="LinkedIn"><img src="./photos and icon/linkedin.png" alt="LinkedIn"></a></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <h3>&copy; <span id="year"></span> Kesavan. All Rights Reserved.</h3>
+        <h4>Phone number: +91 63 74 79 02 92</h4>
+        <h4>Email: mr.kesavaperumal@gmail.com</h4>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
