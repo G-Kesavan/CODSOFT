@@ -1,4 +1,4 @@
-let outputbox =document.getElementById("display-screen")
+let outputbox =document.getElementById("display-screen");
 
 function print(numbers){
     outputbox.value +=numbers
