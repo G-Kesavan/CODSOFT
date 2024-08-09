@@ -1,79 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
-*{
+/* CSS Variables */
+:root {
+    --main-bg-color: #eff5f5; /* Background color for main sections */
+    --primary-color: #073cce; /* Primary color used in headers and footers */
+    --hover-bg-color: #093dcc; /* Background color on hover for links */
+    --text-color: #080266; /* Default text color */
+    --link-color: #2b0e91; /* Color for links */
+    --button-bg-color: #093dcc; /* Background color for buttons */
+    --button-hover-bg-color: #eff5f5; /* Background color for button hover state */
+    --button-hover-text-color: #093dcc; /* Text color for button hover state */
+    --border-color: rgb(90, 134, 255); /* Border color used in various elements */
+    --shadow-color: rgb(20, 16, 53); /* Shadow color used in various elements */
+    --header-bg-color: transparent; /* Background color for header */
+    --footer-bg-color: var(--main-bg-color); /* Background color for footer */
+}
+
+/* Global Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    height:190vh;
+html{
+    scroll-behavior: smooth;
+}
+
+/* Body Styling */
+body {
+    height:500vh; /* Adjusted for content height */
     width: 100%;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
 }
-.header{
-  width: 100%;
-  height: 10vh;
-  background-color:transparent;
-  display: flex;
-  justify-content: center; 
-  position:fixed;
-  z-index: 9999;
+
+/* Header Styling */
+.header {
+    width: 100%;
+    height: 10vh;
+    background-color: var(--header-bg-color); /* Use header background color variable */
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 9999;
 }
-.sideber a,.navber a{
-  color: aliceblue;
-  text-decoration: none;
-  font-weight: 500;
+
+/* Sidebar and Navbar Links */
+.sideber a, .navber a {
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 500;
 }
-.navber{
-  height: 60%;
-  width: 70%;
-  background-color: #073cce;
-  position: relative;
-  border-radius: 40px;
-  display: flex;
-  display: none;
-  align-items: center;
-  box-shadow: -0px -0px 5px 2px rgb(20, 16, 53);
-  color: white;
+
+/* Navbar Styling */
+.navber {
+    height: 60%;
+    width: 70%;
+    background-color: var(--primary-color); /* Use primary color variable */
+    position: relative;
+    border-radius: 40px;
+    display: flex;
+    display: none;
+    align-items: center;
+    box-shadow: 0 0 5px 2px var(--shadow-color); /* Use shadow color variable */
+    color: white;
 }
-.navber ul{
-  display: flex;
-  list-style: none;
-  justify-content: space-around;
-  width: 100%;
+
+.navber ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 100%;
 }
-.navber ul li{
-  padding: 2px;
-  position: relative;
-  display: flex;
-  font-size: 22px;
-  padding: 6px;
+
+.navber ul li {
+    padding: 6px;
+    position: relative;
+    display: flex;
+    font-size: 22px;
 }
-.navber ul li a:hover{
-  font-size: 25px;
-  font-weight: 500;
+
+.navber ul li a:hover {
+    font-size: 25px;
+    font-weight: 500;
 }
-.navber ul li:hover{
-  font-size: 25px;
-  font-weight: 500;
+
+.navber ul li:hover {
+    font-size: 25px;
+    font-weight: 500;
 }
-.navber ol{
-  background-color: #093dcc;
-  z-index: 1;
-  border-radius: 0px 0px 15px 15px;
-  position: absolute;
-  width: 300px;
-  padding: 10px;
-  top:99%;
-  left: -100px;
+
+.navber ol {
+    background-color: var(--hover-bg-color); /* Use hover background color variable */
+    z-index: 1;
+    border-radius: 0 0 15px 15px;
+    position: absolute;
+    width: 300px;
+    padding: 10px;
+    top: 99%;
+    left: -100px;
 }
-.navber ol li{
-  padding: 5px;
-  display: block;
-  text-align: center;
+
+.navber ol li {
+    padding: 5px;
+    display: block;
+    text-align: center;
 }
 .con-list,.pro-list,.ser-list{
   display: none;
@@ -87,307 +120,585 @@ body{
 #Contect:hover .con-list{
   display: block;
 }
-.sideber{
-  height: 87%;width: 100%;
-  display: flex;
-  background-color:#073cce;
-  border-radius: 0px 0px 30% 30%;
-  box-shadow: -0px -0px 5px 2px rgb(20, 17, 43);
-  z-index: 888;
-}
-.sideber ul{
-  height: 100%;
-  width: 100%;
-  display: flex;
-  list-style: none;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  color: aliceblue;
-  font-size: 20px;
-}
-.sideber ul li:nth-child(2){
-  position: relative;
-}
-#menu-icon{
-  display: block;
-}
-#close-icon{
-  display: none;
-}
-.sideber ul li ul{
-  display:none;
-  position: absolute;
-  background-color:rgba(12, 68, 223, 0.918) ;
-  height: 300px;
-  width: 200px;
-  right:25px;
-  align-items: center;
-  border-radius: 20px;
-  justify-content:center;
-}
-.main{
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  background-color: #eff5f5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 2.5%;
-}
-.image {
-  width: 100%;
-  height: 60%;
-  border-radius: 0px 0px 0px 200px;
-  border-top:11vh;
-  border-bottom: 5px;
-  border-left: 5px;
-  border-color: rgb(90, 134, 255);
-  border-style: solid;
-}
-.image {
-  background-color: rgb(90, 134, 255);
-  background-image: url(./intro.png);
-  background-position:center;
-  background-size:cover;
-}
-.text{
-  height: 40%;
-  width: 100%;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items:center;
-  justify-content:center;
-  padding: 10px;
-}
-.text h2{
-font-size: 28px;
-text-align: center;
-}
-.text h4{
-font-size: 20px;
-text-align: center;
-}
-.text button{
-  height: 3rem;
-  width: 7rem;
-  border-radius: 30px;
-  border:solid #093dcc 1px;
-  box-shadow: 0px 0px 3px 2px ;
-  background-color:#093dcc;
-  color: #eff5f5;
-  font-weight: 500;
-  font-size: 15px;
-}
-.text button:hover{
-  background-color:#eff5f5;
-  color: #093dcc;
-  box-shadow: 0px 0px 3px 2px rgb(31, 12, 75);
-  font-size: 17px;
-}
-.cards{
-  width: 100%;
-  height: 90vh;
-  position: relative;
-}
-.productdetial{
-  display: flex;
-  flex-flow: column wrap;
-  height: 100%;
-  width: 100%;
-  background-color:#eff5f5 ;
-}
-.product-list{
-height: 25%;
-width: 100%;
-display: flex;
-flex-flow: column wrap;
-align-items: center;
-justify-content: center;
-}
-.product-list p{
-padding: 5px;
-text-align: center;
-font-size: 20px;
-color: #080266;
-font-weight: 400;
-}
-.product-list h3{
-  font-size: 25px;
-  color: black;
-}
-.product-list a{
- text-decoration: none;
- font-size: 23px;
- color: #2b0e91;
-  padding: 5px;
- font-weight: 700;
-}
-.product-list h2{
-  padding: 5px;
-  color: rgb(218, 1, 1);
-  font-size: 30px;
-  text-shadow: #f5f5f5 2px 2px 1px;
-  font-weight: 900;
-}
-.discount{
-  background-color: #073cce;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12rem 12rem 0px 0px;
-}
-#pro0{
-  background-color: #eff5f5;
-  display: flex;
-  align-items: flex-start;
-}
-#pro1{
-  background-color: rgba(12, 68, 223, 0.631);
-}
-#pro2{
-  background-color: rgba(12, 68, 223, 0.548);
-}
-#pro3{
-  background-color: #0c44df5e;
-}
 
-@media screen and (min-width : 630px){
-  .header{
-    align-items: center;
-  }
-  body{
-    height: 170vh;
-  }
-  .text h2{
-    font-size: 28px;
-  }
-  .text h4{
-    font-size: 20px;
-    text-align: center;
-  }
-  .cards{
-    height: 80vh;
-  }
-  .productdetial{
-    flex-flow: row wrap;
-  }
-  .product-list{
-    width: 50%;
-    height: 50%;
-  }
-  #pro1{
-    border-radius: 30px 0px 0px 0px;
-  }
-  .cards p{
-    font-size: 20px;
-    color: #220135;
-    font-weight: 500;
-  }
-  .cards h3{
-    font-size: 22px;
-    color: #0b009e;
-  }
-  .cards a{
-    font-size: 18px;
-    color: black;
-    font-weight: 700;
-  }
-}
-@media screen and (min-width : 7x80px){
-
-  .navber{
+/* Sidebar Styling */
+.sideber {
+    height: 87%;
+    width: 100%;
     display: flex;
-  }
-  .sideber{
-    display: none;
-  }
+    background-color: var(--primary-color); /* Use primary color variable */
+    border-radius: 0 0 30% 30%;
+    box-shadow: 0 0 5px 2px var(--shadow-color); /* Use shadow color variable */
+    z-index: 888;
 }
-@media screen and (min-width : 930px){
-  body{
-    height: 100vh;
-  }
-  header{
-    height: 12vh;
-  }
-  .main{
-    height: 72vh;
-    flex-flow: row-reverse;
-  }
-  .cards{
-    height: 28vh;
-  } 
-  .cards p{
+
+.sideber ul {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    color: aliceblue;
     font-size: 20px;
-    color: #220135;
-    font-weight: 500;
-  }
-  .cards h3{
-    font-size: 23px;
-    color: #eff5f5;
-  }
-  .cards a{
-    font-size: 21px;
-    color: black;
-    font-weight: 700;
-  }
-  .image {
-    width: 45%;
-    height: 95%;
-    margin-bottom: 2.5%;
-  }
-  .text{
-    width: 50%;
-    height: 100%;
-    align-items: flex-start;
-    padding: 20px 20px 20px 50px;
-  }
-  .text h2{
-    font-size: 33px;
-    text-align: left;
-  }
-  .text h4{
-    font-size: 24px;
-    text-align: left;
-  }
-  .product-list{
-    width: 25%;
-    height: 100%;
-  }
 }
-@media screen and (min-width : 1230px){
-  .text h2{
-    font-size: 35px;
-    text-align: left;
-  }
-  .text h4{
-    font-size: 26px;
-    text-align: left;
-  }
-  .cards p{
-    font-size: 22px;
-    color: #220135;
-    font-weight: 500;
-  }
-  .cards h3{
-    font-size: 25px;
-    color: #eff5f5;
-  }
-  .cards a{
-    font-size: 23px;
-    color: black;
-    font-weight: 700;
-  }
-  .text button{
-    height: 4rem;
-    width: 8rem;
+
+.sideber ul li:nth-child(2) {
+    position: relative;
+}
+
+#menu-icon {
+    display: block;
+}
+
+#close-icon {
+    display: none;
+}
+
+.sideber ul li ul {
+    display: none;
+    position: absolute;
+    background-color: rgba(12, 68, 223, 0.918);
+    height: 300px;
+    width: 200px;
+    right: 25px;
+    align-items: center;
+    border-radius: 20px;
+    justify-content: center;
+}
+
+/* Main Content Styling */
+.main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: var(--main-bg-color); /* Use main background color variable */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2.5%;
+}
+
+/* Image Styling */
+.image {
+    width: 100%;
+    height: 55%;
+    border-radius: 0 0 0 200px;
+    border-top: 11vh solid var(--border-color); /* Use border color variable */
+    border-bottom: 5px solid var(--border-color); /* Use border color variable */
+    border-left: 5px solid var(--border-color); /* Use border color variable */
+    background-color: var(--border-color); /* Use border color variable */
+    background-image: url(./photos\ and\ icon/intro.png);
+    background-position: center;
+    background-size: cover;
+}
+
+/* Text Section Styling */
+.text {
+    height: 45%;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.text h2 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.text h4 {
     font-size: 18px;
-    margin-top: 10px;
-  }
+    text-align: center;
+}
+
+.text button {
+    height: 2.5rem;
+    width: 6rem;
+    border-radius: 30px;
+    border: solid var(--button-bg-color) 1px;
+    box-shadow: 0 0 3px 2px;
+    background-color: var(--button-bg-color); /* Use button background color variable */
+    color: var(--main-bg-color); /* Use main background color variable */
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.text button:hover {
+    background-color: var(--button-hover-bg-color); /* Use button hover background color variable */
+    color: var(--button-hover-text-color); /* Use button hover text color variable */
+    box-shadow: 0 0 3px 2px rgb(31, 12, 75);
+    font-size: 17px;
+}
+
+/* Cards Section Styling */
+.cards {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.productdetial {
+    display: flex;
+    flex-flow: column wrap;
+    height: 100%;
+    width: 100%;
+    background-color: var(--main-bg-color); /* Use main background color variable */
+}
+
+.product-list {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.product-list p {
+    text-align: center;
+    font-size: 19px;
+    color: var(--text-color); /* Use text color variable */
+    font-weight: 400;
+    padding: 0px 2px 0px 2px;
+}
+
+.product-list h3 {
+    font-size: 22px;
+    color: black;
+}
+
+.product-list a {
+    text-decoration: none;
+    font-size: 22px;
+    color: var(--link-color); /* Use link color variable */
+    font-weight: 700;
+    display: inline;
+}
+
+.product-list h2 {
+    padding: 5px;
+    color: rgb(218, 1, 1);
+    font-size: 30px;
+    text-shadow: var(--main-bg-color) 2px 2px 1px;
+    font-weight: 900;
+}
+
+/* Discount Section Styling */
+.discount {
+    background-color: var(--primary-color); /* Use primary color variable */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12rem 12rem 0 0;
+}
+
+#pro0 {
+    background-color: var(--main-bg-color); /* Use main background color variable */
+    display: flex;
+    align-items: flex-start;
+}
+
+#pro1 {
+    background-color: rgba(12, 68, 223, 0.631);
+}
+
+#pro2 {
+    background-color: rgba(12, 68, 223, 0.548);
+}
+
+#pro3 {
+    background-color: #0c44df5e;
+}
+
+/* Sections Styling */
+.sections {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #b5c8fdab;
+}
+
+/* Service Container Styling */
+.service-con{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 10px;
+}
+
+/* Services Styling */
+.services{
+    display: flex;
+    flex-flow: row wrap;
+    height: 85%;
+    width: 90%;
+    gap: 20px;
+    justify-content: center;
+    overflow: auto;
+}
+
+.services-box{
+    height: 150px;
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: solid 1px #2556d1;
+    border-radius: 20px;
+    background-color: #e8ecf8;
+    overflow: auto;
+    font-size: 17px;
+}
+
+.services-box h3{
+    color: #080266; /* Use text color variable */
+}
+
+/* Contact Section Styling */
+#Contect{
+    background-color: #b2c7fc;
+}
+
+.sec-container {
+    position: absolute;
+    top: 10vh;
+    height: 90vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contact Form Styling */
+.contect-con {
+    display: flex;
+    flex-direction: column;
+}
+
+.contect-box {
+    background-color: #0c44df5e;
+    width: 85%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 15px;
+    border: solid 1.5px var(--border-color); /* Use border color variable */
+}
+
+.cont {
+    padding: 2px;
+}
+
+.contect-name, .contect-email, .contect-subject {
+    height: 13%;
+    width: 100%;
+}
+
+.contect-message {
+    display: flex;
+    height: 50%;
+    width: 100%;
+}
+
+.contect-box input {
+    height: 100%;
+    width: 100%;
+    border: solid 1px var(--border-color); /* Use border color variable */
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    outline: none;
+}
+
+.contect-heading{
+    color: #080266; /* Use text color variable */
+}
+
+.cont input {
+    background-color: #ccd9fa;
+}
+
+.cont input::placeholder {
+    color: #1a0129;
+    font-size: 18px;
+}
+
+.contect-box button {
+    border-radius: 30%;
+    background-color: var(--button-bg-color); /* Use button background color variable */
+    color: aliceblue;
+    height: 3rem;
+    width: 7rem;
+    border: solid 1px var(--border-color); /* Use border color variable */
+    font-size: 20px;
+}
+
+/* Social Media Styling */
+.social-media {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.social-icon {
+    height: 50px;
+    width: 50px;
+}
+
+.social-icon:hover {
+    height: 60px;
+    width: 60px;
+}
+
+.social-icon img {
+    height: 100%;
+    width: 100%;
+}
+
+/* About Section Styling */
+.about-con{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.about-image{
+    background-color:#405fb3;
+    background-image: url(./photos\ and\ icon/welcome.svg);
+    background-position: top;
+    background-size: cover;
+    height: 40%;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 45%;
+}
+
+.about-text{
+    background-color: transparent;
+    height: 43%;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    text-align: center;
+    overflow: auto;
+}
+
+/* Footer Styling */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    background-color: var(--footer-bg-color); /* Use footer background color variable */
+    height: auto;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Media Queries */
+@media screen and (min-width: 630px) {
+    
+    .about-image{
+        height:80%;
+        width: 45%;
+    }
+    .about-text{
+        height: 90%;
+        width: 48%;
+        font-size: 20px;
+    }
+    
+    .header {
+        align-items: center;
+    }
+
+    body {
+        height: 170vh;
+    }
+
+    .text h2 {
+        font-size: 28px;
+    }
+
+    .text h4 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .cards {
+        height: 80vh;
+    }
+
+    .productdetial {
+        flex-flow: row wrap;
+    }
+
+    .product-list {
+        width: 50%;
+        height: 50%;
+    }
+
+    #pro1 {
+        border-radius: 30px 0 0 0;
+    }
+
+    .cards p {
+        font-size: 20px;
+        color: #220135;
+        font-weight: 500;
+    }
+
+    .cards h3 {
+        font-size: 22px;
+        color: #0b009e;
+    }
+
+    .cards a {
+        font-size: 18px;
+        color: black;
+        font-weight: 700;
+    }
+}
+
+@media screen and (min-width: 780px) {
+    .navber {
+        display: flex;
+    }
+
+    .sideber {
+        display: none;
+    }
+    footer {
+        font-size: 18px;
+    }
+    .contect-heading{
+        font-size: 20px;   
+    }
+}
+
+@media screen and (min-width: 930px) {
+    body {
+        height: 100vh;
+    }
+    .main {
+        height: 72vh;
+        flex-flow: row-reverse;
+    }
+
+    .cards {
+        height: 28vh;
+    }
+
+    .cards p {
+        font-size: 20px;
+        color: #220135;
+        font-weight: 500;
+    }
+
+    .cards h3 {
+        font-size: 23px;
+    }
+
+    .cards a {
+        font-size: 21px;
+        font-weight: 700;
+    }
+
+    .image {
+        width: 45%;
+        height: 95%;
+        margin-bottom: 2.5%;
+    }
+
+    .text {
+        width: 50%;
+        height: 100%;
+        align-items: flex-start;
+        padding: 20px 20px 20px 50px;
+    }
+
+    .text h2 {
+        font-size: 33px;
+        text-align: left;
+    }
+
+    .text h4 {
+        font-size: 24px;
+        text-align: left;
+    }
+
+    .product-list {
+        width: 25%;
+        height: 100%;
+    }
+    .services-box{
+        width: 28%;
+        height: 40%;
+        gap: 5px;
+    }
+}
+
+@media screen and (min-width: 1230px) {
+    .text h2 {
+        font-size: 35px;
+        text-align: left;
+    }
+
+    .text h4 {
+        font-size: 26px;
+        text-align: left;
+    }
+
+    .cards p {
+        font-size: 22px;
+        color: #220135;
+        font-weight: 500;
+    }
+
+    .cards h3 {
+        font-size: 25px;
+    }
+
+    .cards a {
+        font-size: 23px;
+        font-weight: 700;
+    }
+
+    .text button {
+        height: 4rem;
+        width: 8rem;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    .services-box{
+        font-size: 21px;
+    }
 }

@@ -9,97 +9,165 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header class="header">
-
+        <!-- Navigation Bar for Larger Screens -->
         <nav class="navber">
-                <ul>
-                    <li id="Home"><a href="">Home</a></li>
-                    <li id="Product">Product
-                        <ol class="pro-list">
-                        <li><a href="">Web development</a></li>
-                        <li><a href="">App development</a></li>
-                        <li><a href="">Server arangment</a></li>
-                        </ol>
-                    </li>
-                    <li id="Service">Service
-                        <ol class="ser-list">
-                        <li>product service</li>
-                        <li>web side update</li>
-                        </ol>
-                    </li>
-                    <li id="Contect">Contect
-                        <ol class="con-list">
-                            <li>Customer care</li>
-                            <li>offer detial</li>
-                        </ol>
-                    </li>
-                    <li id="About"><a href="">About</a></li>
-                </ul>
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li id="Product">Product
+                    <ol class="pro-list">
+                        <li><a href="#pro1">Web design</a></li>
+                        <li><a href="#pro2">Development</a></li>
+                        <li><a href="#pro3">Graphic design</a></li>
+                    </ol>
+                </li>
+                <li id="Service">Service
+                    <ol class="ser-list">
+                        <li><a href="#service">Web Design</a></li>
+                        <li><a href="#service">Mobile Apps</a></li>
+                        <li><a href="#service">EO Consultancy</a></li>
+                        <li><a href="#service">Graphic Design</a></li>
+                    </ol>
+                </li>
+                <li><a href="#Contect">Contect</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
         </nav>
 
+        <!-- Sidebar Navigation for Smaller Screens -->
         <nav class="sideber">
             <ul>
                 <li>Landing Page</li>
                 <li id="menu">
-                    <span  id="menu-icon" class="material-symbols-outlined" onclick="menushow()">menu</span>
+                    <span id="menu-icon" class="material-symbols-outlined" onclick="menushow()">menu</span>
                     <span id="close-icon" class="material-symbols-outlined" onclick="menuclose()">close</span>
                     <ul class="list">
-                        <li ><a href="#about">Home</a></li>
-                        <li ><a href="#education">Product</a></li>
-                        <li ><a href="#skill">Service</a></li>
-                        <li ><a href="#project">About</a></li>
-                        <li ><a href="#contect">Contect</a></li>
+                        <li><a href="#Home">Home</a></li>
+                        <li><a href="#pro0">Product</a></li>
+                        <li><a href="#service">Service</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#Contect">Contect</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
-
     </header>
     
-    <main class="main">
-        
+    <!-- Main Section -->
+    <main class="main" id="Home">
         <div class="image"></div>
-
         <div class="text">
-            <h2>Landing page in startup</h2>
-            <h4>learn user centered design.create customer landing page with that convert more then any website -on coding required</h4>
+            <h2>Thanks for visiting</h2>
+            <h4>We'll send you a sweet 20% discount coupon to use on your first order and Have a good day</h4>
             <button>SIGN UP</button>
         </div>
-
     </main>
     
+    <!-- Product Cards Section -->
     <section class="cards">
-            <div class="productdetial">
-
-                <div class="product-list" id="pro0">
-                    <div class="discount">
-                        <h2>20%</h2>
-                        <h2>OFF</h2>
-                    </div>
+        <div class="productdetial">
+            <!-- Discount Card -->
+            <div class="product-list" id="pro0">
+                <div class="discount">
+                    <h2>20%</h2>
+                    <h2>OFF</h2>
                 </div>
-                
-                <div class="product-list" id="pro1">
-                    <h3>Product 1</h3>
-                    <p>Lorem this product is use full and very subsribed</p>
-                    <a href="">Read</a>
-                </div>
-
-                <div class="product-list" id="pro2">
-                    <h3>Product 2</h3>
-                    <p>Lorem this product is use full and very subsribed</p>
-                    <a href="">Read</a>
-                </div>
-
-                <div class="product-list" id="pro3">
-                    <h3>Product 2</h3>
-                    <p>Lorem this product is use full and very subsribed</p>
-                    <a href="">Read</a>
-                </div>
-
             </div>
-    </section>
-</body>
-<script src="scrpt.js">
+            
+            <!-- Individual Product Cards -->
+            <div class="product-list" id="pro1">
+                <h3>Web design</h3>
+                <p>Lorem this product is useful and very subscribed</p>
+                <a href="">Read</a>
+            </div>
 
-</script>
+            <div class="product-list" id="pro2">
+                <h3>Development</h3>
+                <p>Lorem this product is useful and very subscribed</p>
+                <a href="">Read</a>
+            </div>
+
+            <div class="product-list" id="pro3">
+                <h3>Graphic design</h3>
+                <p>Lorem this product is useful and very subscribed</p>
+                <a href="">Read</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="sections" id="service">
+        <div class="sec-container service-con">
+            <h1 class="head-service">Service</h1>
+            <div class="services">
+                <!-- Individual Service Boxes -->
+                <div class="services-box">
+                    <h3>Web Design</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing sit amet consectetur.</p>
+                </div>
+                <div class="services-box">
+                    <h3>Graphic Design</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing sit amet consectetur.</p>
+                </div>
+                <div class="services-box">
+                    <h3>Digital Marketing</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing sit amet consectetur.</p>
+                </div>
+                <div class="services-box">
+                    <h3>SEO Consultancy</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing sit amet consectetur.</p>
+                </div>
+                <div class="services-box">
+                    <h3>Mobile app</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing sit amet consectetur.</p>
+                </div>
+                <div class="services-box">
+                    <h3>Business Consultancy</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing sit amet consectetur.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="sections" id="Contect">
+        <div class="sec-container contect-con">
+            <div class="contect-box">
+                <div class="contect-heading cont"><h1>CONTACT ME</h1></div>
+                <div class="contect-name cont"><input type="text" placeholder="Name"></div>
+                <div class="contect-email cont"><input type="email" placeholder="Email"></div>
+                <div class="contect-subject cont"><input type="text" placeholder="Subject"></div>
+                <div class="contect-message cont"><input type="text" placeholder="Message"></div>
+                <div class="contect-button cont"><button>Submit</button></div>
+            </div> 
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <div class="social-icon"><a href="mailto:mr.kesavaperumal@gmail.com" title="Email"><img src="./photos and icon/mail.png" alt="Email"></a></div>
+                <div class="social-icon"><a href="https://t.me/6374790292" title="Telegram"><img src="./photos and icon/telegram.png" alt="Telegram"></a></div>
+                <div class="social-icon"><a href="https://wa.me/6374790292" title="WhatsApp"><img src="./photos and icon/whatsapp.png" alt="WhatsApp"></a></div>
+                <div class="social-icon"><a href="https://www.linkedin.com/in/kesava-perumal-g/" title="LinkedIn"><img src="./photos and icon/linkedin.png" alt="LinkedIn"></a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="sections" id="about">
+        <div class="sec-container about-con">
+            <div class="about-image"></div>
+            <div class="about-text">
+                <h1>About US:</h1>
+                <h3>Enhance your Experience: Provide a seamless and informative experience for your visitors with easy navigation</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <h3>&copy; <span id="year"></span> Kesavan. All Rights Reserved.</h3>
+        <h4>Phone number: +91 63 74 79 02 92</h4>
+        <h4>Email: mr.kesavaperumal@gmail.com</h4>
+    </footer>
+</body>
+<script src="scrpt.js"></script>
 </html>

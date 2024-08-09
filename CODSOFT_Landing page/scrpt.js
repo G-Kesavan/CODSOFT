@@ -1,3 +1,5 @@
+document.getElementById('year').textContent = new Date().getFullYear();
+
 const list = document.querySelector(".list")
 const closei = document.querySelector("#close-icon")
 const menui = document.querySelector("#menu-icon")
